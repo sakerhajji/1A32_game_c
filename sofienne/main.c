@@ -1,1 +1,1 @@
-printf("adem est jolie");
+#include "header.h"
