@@ -6,17 +6,19 @@
 
 typedef struct
 {
+    SDL_Rect position, PosHP;
+    SDL_Surface *image[10], *HP;
+    Mix_Chunk *Walk;
+    Mix_Chunk *Jump;
+    Mix_Chunk *Attack;
+    int vie;
+    int moving;    //0:Not moving 1:moving
+    int direction; //0:right 1:left 2:attack
+} Hero;
 
-
-}Ennemi;
-
-
-void initEnnemi(Ennemi*e);
-void afficherEnnemi(Ennemi e, SDL_Surface * screen);
-void animerEnnemi( Ennemi * e);
-void deplacer( Ennemi * e);
-int collisionBB( personne p, Ennemi e) ou int collisionBB( SDL_Rect posp, SDL_Rect pose);
-void deplacerIA( Ennemi * e, SDL_Rect posPerso);
+void InitHero(Hero *A);
+void MoveHero(Hero *A);
+void FreeHero(Hero *A);
 
 
 
