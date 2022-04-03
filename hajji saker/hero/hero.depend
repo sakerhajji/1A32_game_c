@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1648899263 source:/home/sakerhajji/Desktop/1A32_game_c/hajji saker/hero/hero.c
+
+1649021483 source:/home/sakerhajji/Desktop/1A32_game_c/hajji saker/hero/main.c
+	<stdio.h>
+	<stdlib.h>
+	"hero.h"
+
+1648900261 /home/sakerhajji/Desktop/1A32_game_c/hajji saker/hero/hero.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<SDL/SDL.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_mixer.h>
+	<SDL/SDL_rotozoom.h>
+
