@@ -24,17 +24,17 @@ e->enemat[j] = IMG_Load(filenem);
 }
 void afficherEnnemi(Ennemi e, SDL_Surface * screen)
 {
-SDL_BlitSurface(e.enem[],NULL,&screen,&e.posenemy);
+SDL_BlitSurface(e.enemr[0],NULL,&screen,&e.posenemy);
 SDL_Flip(screen);
 
 }
-void animerEnnemi( Ennemi * e,SDL_Rect posp)
+void animerEnnemi( Ennemi * e,SDL_Rect posp,SDL_Surface * screen)
 {int i=1;
-  if((posenemy.x+50 >= posp.x + posp.w)||(posenemy.x+50 + posenemy.w+50 <= posp.x)||(posenemy.y+50 >= posp.y + posp.h)||(posenemy.y+50 + posenemy.h+50 <= posp.y))
+  if((e->posenemy.x+50 >= posp.x + posp.w)||(e->posenemy.x+50 + e->posenemy.w+50 <= posp.x)||(e->posenemy.y+50 >= posp.y + posp.h)||(e->posenemy.y+50 + e->posenemy.h+50 <= posp.y))
   {
 
 {
-SDL_BlitSurface(e->enemat[i],NULL,screen,&e->posenemy);
+SDL_BlitSurface(e->enemat[i],NULL,&screen,&e->posenemy);
 SDL_Delay(100);
 SDL_Flip(screen);
   if (i==23) i=1;
@@ -44,11 +44,11 @@ SDL_Flip(screen);
   }
   }
 }
-void deplacer( Ennemi * e)
-{ienem=0;
+void deplacer( Ennemi* e,SDL_Surface* screen)
+{int ienem=0;
 if(e->posenemy.x>e->posenemy.x-500)
 {
-SDL_BlitSurface(e->eneml[ienem],NULL,screen,&e->posenemy);
+SDL_BlitSurface(e->eneml[ienem],NULL,&screen,&e->posenemy);
 SDL_Delay(100);
 SDL_Flip(screen);
 e->posenemy.x=e->posenemy.x-5;
@@ -59,7 +59,7 @@ e->posenemy.x=e->posenemy.x-5;
   else if(e->posenemy.x>=e->posenemy.x-500)
   {
   e->posenemy.x=e->posenemy.x+5;
-  SDL_BlitSurface(e->enemr[ienem],NULL,screen,&e->posenemy);
+  SDL_BlitSurface(e->enemr[ienem],NULL,&screen,&e->posenemy);
 SDL_Delay(100);
 SDL_Flip(screen);
   if (ienem==11) ienem=0;
@@ -69,7 +69,7 @@ SDL_Flip(screen);
   }
 
 }
-int collisionBB( SDL_Rect posp, SDL_Rect pose);
+int collisionBB( SDL_Rect posp, SDL_Rect pose)
 {
    if((pose.x >= posp.x + posp.w)
 	|| (pose.x + pose.w <= posp.x)
