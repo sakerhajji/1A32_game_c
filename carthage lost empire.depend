@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1651923828 source:/home/sakerhajji/Desktop/cle/menu.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_getenv.h>
+	<SDL/SDL_mixer.h>
+
+1645645665 /home/sakerhajji/Desktop/cle/image.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+
+1651924113 source:/home/sakerhajji/Desktop/cle/main.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	<SDL/SDL_getenv.h>
+	<SDL/SDL_mixer.h>
+
